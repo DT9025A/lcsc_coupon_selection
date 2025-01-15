@@ -1,18 +1,18 @@
 // ==UserScript==
 // @name         筛选立创商城满减券
 // @namespace    https://www.szlcsc.com/
-// @version      1.4
+// @version      1.5
 // @description  筛选立创商城满减的券
 // @author       dt
-// @match        https://www.szlcsc.com/huodong.html*
+// @match        https://activity.szlcsc.com/huodong.html*
 // @icon         https://static.szlcsc.com/ecp/assets/web/static/images/favicon.ico
 // @grant        none
 // @license      MIT
 // ==/UserScript==
-
+ 
 (function() {
     'use strict';
-
+ 
     // 用户设置区域
     const configs = {
         // 保留16-15券
@@ -26,7 +26,7 @@
         // 是否移除新人专享券
         remove_new_account_exclusive: true
     };
-
+ 
     document.querySelectorAll('body > div.coupon-wraper > div.main_wraper > div.all-coupons-table').forEach (holder => {
         // 获取所有的 coupon-item 元素
         const couponItems = holder.querySelectorAll('.coupon-item');
